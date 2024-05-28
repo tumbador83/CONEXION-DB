@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productosDelete.css">
+    <title>Eliminar Producto</title>
+</head>
+<body>
+    <header class="logo">
+        <h1>Cell Solutions</h1>
+        <img src="/img/tarjeta.png" >
+    </header>
+
+    <div class="delete-container">
+        <h1>Eliminar Producto</h1>
+        <p>¿Está seguro de que desea eliminar el producto: <%= producto.nombre %></p>
+    
+        <form action="/productos/delete/<%= producto.producto_id %>?_method=PUT" method="POST">
+            <button type="submit" class="delete-btn">Eliminar</button>
+        </form>
+    </div>
+    <br>
+   
+    <a href="/productos" class="action-link">Volver a la lista</a>
+</body>
+</html>

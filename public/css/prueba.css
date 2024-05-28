@@ -1,0 +1,217 @@
+/*reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*header */
+
+header{
+    height: 45vh;
+    /* background-color: grey; */
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/img/electronica.webp');
+    background-size: cover;
+   
+    background-repeat: no-repeat;
+}
+.logo{
+    
+    text-transform: uppercase;
+    /* color:rgb(29, 223, 158); */
+    /* font-weight: 500; */
+    color:whitesmoke;
+
+}
+.menu a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrar-menu{
+    order: 1;
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: rgb(29, 223, 158);
+}
+#check{
+    display: none;
+}
+
+/*banner*/
+.ban{
+    /*margin-top: 20px;*/
+    padding: 0 50px;
+    background-image: url(/img/celu_roto.jpg);
+    height: 55vh;
+    background-size: cover;
+    background-position: center;
+}
+.ban::before{
+    content: '';
+    background: rgba(77,77,92,0.6);
+    position: absolute;
+    width: 100%;
+    height: 55vh;
+    left: 0;
+}
+.banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+.banner{
+    position: relative;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*accesotrios*/
+.accesorios{
+    font-size: 20px;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.accesorios img{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    border-radius: 20%;
+    max-width: 100%;
+    height: auto ;
+   
+    
+}
+
+.accesorios div{
+    padding: 30px 30px;
+    
+}
+
+div h4{
+    margin-bottom: 15px;
+}
+
+.boton-imagen {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  footer{
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+    height: 20vh;
+    font-size: 20px;
+    background-image: url('/img/electronica.webp');
+}
+
+h2{
+    font-size: 50px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+a{
+    font-size: 20px;
+}
+
+/*responsive*/
+
+@media(max-width: 501px){
+    /*header*/
+    header{
+        background-color: rgb(29, 223, 158);
+        color: grey;
+    }
+header .logo{
+    color: grey;
+}
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+        
+    }
+    
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: whitesmoke;
+        right: -100%;
+        top:0;
+        text-align: center;
+        padding: 100px 0;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        color: rgb(29, 223, 158) ;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    /*accesorios*/
+    .accesorios{
+        
+        flex-direction: column;
+    }
+
+    /*formulario*/
+    .dato-form{
+        flex-direction: column;
+    }
+
+    .formulario{
+        background-color: grey;
+    }
+
+
+}
+
+@media(min-width: 801px){
+    .formulario{
+        background: rgb(29, 223, 158);
+    }
+    footer{
+        /* background: rgb(29, 223, 158); */
+        color: grey;
+    }
+}
+
+
+
+

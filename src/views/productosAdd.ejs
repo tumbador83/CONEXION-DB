@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productosAdd.css">
+    <title>Agregar Producto</title>
+</head>
+<body>
+    <header class="logo">
+        <h1>Cell Solutions</h1>
+        <img src="/img/tarjeta.png" >
+    </header>
+    
+    <h1>Agregar Producto</h1>
+    <form action="/productos/create" method="POST">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" required>
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" step="0.01" id="precio" name="precio" required>
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" required>
+        </div>
+        <button type="submit" class="submit-btn">Agregar</button>
+    </form>
+    <a href="/productos" class="action-link">Volver a la lista</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productosDetail.css">
+    <title>Detalle del Producto</title>
+</head>
+<body>
+    <header class="logo">
+        <h1>Cell Solutions</h1>
+        <img src="/img/tarjeta.png" >
+    </header>
+    <h1>Detalle del Producto</h1>
+    <div class="product-detail ">
+        <p><strong>Nombre:</strong> <%= producto.nombre %></p>
+        <p><strong>Descripción:</strong> <%= producto.descripcion %></p>
+        <p><strong>Precio:</strong> <%= producto.precio %></p>
+        <p><strong>Stock:</strong> <%= producto.stock %></p>
+    </div>
+    
+    <a href="/productos" class="action-link">Volver a la lista</a>
+</body>
+</html>

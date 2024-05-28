@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productosList.css">
+    <title>Lista de Productos</title>
+</head>
+<header class="logo">
+    <h1>Cell Solutions</h1>
+    <img src="/img/tarjeta.png" >
+</header>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul class="product-list">
+        <% productos.map(producto => { %>
+            <li class="product-card">
+                <a href="/productos/detail/<%= producto.producto_id %>"><%= producto.nombre %></a>
+                <br>
+                <div class="product-actions">
+                    <a href="/productos/edit/<%= producto.producto_id %>">Editar</a>
+                    <a href="/productos/delete/<%= producto.producto_id %>">Eliminar</a>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+    <div class="actions">
+        <a href="/productos/add" class="action-link">Agregar Producto</a>
+        <br>
+        <a href="/" class="action-link">Volver al Inicio</a>
+        <br>
+    </div>
+   <section>
+    <footer>
+        <p>&copyDERECHOS RESERVADOS 2024</p>
+    </footer>
+   </section>
+    
+</body>
+</html>
